@@ -14,7 +14,7 @@ class AddForeinKey extends Migration
     public function up()
     {
         Schema::table('tasks', function (Blueprint $table) {
-            $table->foreign('employee_id', 'employee')
+            $table->foreign('employees_id', 'employee')
                 -> references('id')
                 ->on('employees');
 

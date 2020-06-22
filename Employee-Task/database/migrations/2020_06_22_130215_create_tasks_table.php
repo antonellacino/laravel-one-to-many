@@ -19,7 +19,7 @@ class CreateTasksTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('deadline');
-            $table->bigInteger('employee_id')->unsigned()->index();
+            $table->bigInteger('employees_id')->unsigned()->index();
 
             $table->timestamps();
         });
@@ -32,6 +32,6 @@ class CreateTasksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_task');
+        Schema::dropIfExists('tasks');
     }
 }

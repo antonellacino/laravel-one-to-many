@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'EmployeesController@index')->name('home');
+Route::get('/editTask/{id}', 'EmployeesController@editTask')->name('editTask');
+Route::post('/storeTask/{id}', 'EmployeesController@storeTask')->name('storeTask');
