@@ -16,7 +16,7 @@ class TasksSeeder extends Seeder
             -> make()
             -> each(function ($task){
                $employee=Employee::inRandomOrder()->first();
-               $task->employees()->associate($employee);
+               $task->employee()->associate($employee);
                $task->save();
             });
     }

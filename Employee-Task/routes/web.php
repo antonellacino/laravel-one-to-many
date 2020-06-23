@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', 'EmployeesController@index')->name('home');
-Route::get('/editTask/{id}', 'EmployeesController@editTask')->name('editTask');
-Route::post('/storeTask/{id}', 'EmployeesController@storeTask')->name('storeTask');
+//Employee Routes
+Route::get('/', 'TasksController@index')->name('home');
+Route::get('/showEmployee/{id}','EmployeesController@showEmployee')->name('showEmployee');
+
+
+
+//Task Routes
+Route::get('/createTask', 'TasksController@createTask')->name('createTask');
+Route::get('/showTask/{id}', 'TasksController@showTask')->name('showTask');
+Route::get('/editTask/{id}', 'TasksController@editTask')->name('editTask');
+Route::post('/storeTask/{id}', 'TasksController@storeTask')->name('storeTask');
+

@@ -5,15 +5,10 @@
     box-sizing: border-box;
 }
 
-main {
-    height: auto;
-    font-size: 18px;
-    min-height: 80vh;
-}
-
 h1{
     text-align: center;
 }
+
 .flexColumn {
     display: flex;
     flex-direction: column;
@@ -24,20 +19,35 @@ h1{
     }
 
 }
-//-------------------------------------
+
+
+//----------------------------------------------------
+main {
+    width: 80%;
+    min-height: 80vh;
+    font-size: 18px;
+    margin: auto;
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 .employees{
-    margin-left: 50px;
     ul{
         list-style: none;
     }
     a{
         text-decoration: none;
+        font-size: 14px;
     }
 }
 .name{
     font-size: 20px;
     font-weight: bold;
 }
+
+
 
 //-------------------------------------
 header {
