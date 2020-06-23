@@ -21,7 +21,7 @@ class AddForeinKey extends Migration
 
         });
 
-        Schema::table('location_employee', function (Blueprint $table) {
+        Schema::table('employee_location', function (Blueprint $table) {
                 $table->foreign('location_id', 'location')
                     -> references('id')
                     ->on('locations')
@@ -47,7 +47,7 @@ class AddForeinKey extends Migration
             $table->dropForeign('employee!');
         });
 
-        Schema::table('location_employee', function (Blueprint $table) {
+        Schema::table('employee_location', function (Blueprint $table) {
             $table->dropForeign('location');
             $table->dropForeign('employee');
         });

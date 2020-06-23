@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLocationEmployeeTable extends Migration
+class CreateEmployeeLocationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateLocationEmployeeTable extends Migration
      */
     public function up()
     {
-        Schema::create('location_employee', function (Blueprint $table) {
+        Schema::create('employee_location', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             $table->bigInteger('employee_id')->unsigned()->index();
@@ -29,6 +29,6 @@ class CreateLocationEmployeeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('location_employee');
+        Schema::dropIfExists('employee_location');
     }
 }
